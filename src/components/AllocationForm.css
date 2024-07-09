@@ -1,0 +1,57 @@
+button {
+    border: none;
+    background: none;
+    cursor: pointer;
+    padding: 0;
+}
+
+.icon {
+    width: 20px;
+    height: 20px;
+    
+}
+
+.btn-primary{
+    padding: 8px;
+    font-size: 14px;
+    border-radius: 4px;
+    border: 0.1px solid #cccccc;
+    background-color: #fff;
+    outline: none;
+    cursor: pointer;
+    transition: border-color 0.3s, background-color 0.3s;
+    background-color: #1ae331;
+    border: 0.1px solid #a0ffa5;
+}
+
+.btn-primary:hover{
+    background-color: green;
+    border-color: #014e10;
+}
+
+
+.btn-primary :focus {
+    box-shadow: 0 0 0.3px 0.1px #00ff2f;
+}
+
+.custom-select {
+    padding: 8px;
+    font-size: 14px;
+    border-radius: 4px;
+    border: 0.1px solid #ccc;
+    background-color: #fff;
+    outline: none;
+    cursor: pointer;
+    transition: border-color 0.3s, background-color 0.3s;
+    background-color: #e0e4e0; 
+    border: 0.1px solid #a0ffa5; 
+}
+
+.custom-select:hover{
+    background-color: #18d363; 
+    border-color: #014e10; 
+}
+
+.custom-select:focus {
+    box-shadow: 0 0 0.3px 0.1px #00ff2f;
+}

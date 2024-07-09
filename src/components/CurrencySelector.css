@@ -1,0 +1,31 @@
+.currency-dropdown {
+    font-family: Arial, sans-serif;
+    margin-bottom: 20px;
+}
+
+label {
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+select {
+    padding: 8px;
+    font-size: 16px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    outline: none;
+    cursor: pointer;
+    transition: border-color 0.3s, background-color 0.3s;
+    background-color: #e0e4e0;
+    border: 1px solid #a0ffa5;
+}
+   
+select:hover {
+    background-color: #a0ffc6;
+    border-color: #014e10;
+}
+
+select:focus {
+    box-shadow: 0 0 3px 1px #00ff2f;
+}

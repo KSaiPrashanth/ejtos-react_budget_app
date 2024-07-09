@@ -43,6 +43,21 @@ export const AppReducer = (state, action) => {
                     ...state,
                     expenses: [...red_expenses],
                 };
+                case 'UPDATE_EXPENSE':
+                    // Handling the update expense action
+                    const { id, cost } = action.payload;
+                    // Find the expense by id and update its cost
+                    const updatedExpenses = state.expenses.map(expense => {
+                      if (expense.id === id) {
+                        return { ...expense, cost };
+                      }
+                      return expense;
+                    });
+              
+                    return {
+                      ...state,
+                      expenses: updatedExpenses,
+                    };
             case 'DELETE_EXPENSE':
             action.type = "DONE";
             state.expenses.map((currentExp)=> {
@@ -86,7 +101,7 @@ const initialState = {
         { id: "Human Resource", name: 'Human Resource', cost: 40 },
         { id: "IT", name: 'IT', cost: 500 },
     ],
-    currency: '£'
+    currency: '$'
 };
 
 // 2. Creates the context this is the thing our components import and use to get the state
@@ -112,8 +127,8 @@ export const AppProvider = (props) => {
                 expenses: state.expenses,
                 budget: state.budget,
                 remaining: remaining,
+                currency: state.currency,
                 dispatch,
-                currency: state.currency
             }}
         >
             {props.children}
